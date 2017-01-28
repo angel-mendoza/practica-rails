@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #mis gemas
 gem 'materialize-sass'
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

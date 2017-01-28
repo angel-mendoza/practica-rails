@@ -9,10 +9,12 @@
 
 </head>
 <body>
-
-<div class="container center-align">
-  <%= yield %> 
-</div>
+<%= render "layouts/nav" %>
+  <p class="notice" style?"<%= "display:none;" if notice.nil? %>"><%= notice %></p>
+  <p class="alert" style?"<%= "display:none;" if alert.nil? %>"><%= alert %></p>
+  <div class="container center-align">
+    <%= yield %> 
+  </div>
 
 
 </body>

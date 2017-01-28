@@ -1,0 +1,28 @@
+<ul id="dropdown1" class="dropdown-content">
+  <li><%= link_to "Editar Perfil",  edit_user_registration_path(current_user)%></li>
+  <li><%= link_to "Salir",  destroy_user_session_path(), method: :delete %></li>
+</ul>
+  <nav>
+    <div class="nav-wrapper">
+      
+      <%= link_to "Ventas", root_path(), class: "brand-logo"%>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <%if user_signed_in?%>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ususario<i class="material-icons right">arrow_drop_down</i></a></li>
+        <%else%>
+          <li><%= link_to "Registrate",  new_user_registration_path() %></li>
+          <li><%= link_to "Ingresar",  new_user_session_path() %></li>
+        <%end%>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <%if user_signed_in?%>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ususario<i class="material-icons right">arrow_drop_down</i></a></li>
+        <%else%>
+          <li><%= link_to "Registrate",  new_user_registration_path() %></li>
+          <li><%= link_to "Ingresar",  new_user_session_path() %></li>
+        <%end%>
+        
+      </ul>
+    </div>
+  </nav>
